@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DADOS</title>
+</head>
+<body>
+    <h1>INSIRA COM SEUS DADOS</h1>
+    <form action="dados.php" method="post">
+        <p>Digite seu nome: <input type="text" name="csnome" required></p>
+        <p>Digite seu e-mail: <input type="email" name="csemail" required></p>
+        <p>Digite sua data de nascimento: <input type="date" name="csdata" required></p>
+        <p>Escolha a bandeira de seu cartão: <input type="text" name="cscartao" id="" list="cscartao"></p>
+        <datalist id="cscartao">
+            <option value="VISA">
+            <option value="ELO">
+            <option value="MASTERCARD">  
+            <option value="HIPERCARD">    
+        </datalist>
+        <input type="submit" value="Enviar">
+    </form>
+    
+</body>
+</html>
