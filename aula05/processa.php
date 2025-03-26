@@ -1,12 +1,8 @@
 <?php
-    $user = $_POST['csuser'];
-    $psw = $_POST['cspsw'];
 
-    if($user == "aluno@gmail.com" and $psw == "12345"){
-        echo"Autorizado";
-        header('Location: painel/autorizado.php');
-    }else{
-        echo"Não autorizado";
-        header('Location: painel/nao_autorizado.php');
-    };
-?>
+if ($_POST['email'] == 'etec@gmail.com' && $_POST['senha'] == '12345') {
+    $_SESSION['logado'] = true;
+    header("Location: privada.php");
+} else {
+    header("Location: erro.php");
+}
